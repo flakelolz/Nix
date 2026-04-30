@@ -21,12 +21,6 @@
 
   home.stateVersion = "26.05";
 
-  programs.git.enable = true;
-
-  programs.fish = {
-    enable = true;
-  };
-
   home.sessionVariables = {
     SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
   };
@@ -42,6 +36,9 @@
     lazygit
     eza
     gh
+    fzf
+    tldr
+    jq
   ];
 
   programs.home-manager.enable = true;

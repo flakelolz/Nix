@@ -18,7 +18,7 @@ return {
       -- "htmldjango",
       -- "gdscript",
       -- "godot_resource",
-      -- "wgsl",
+      "wgsl",
       "wgsl_bevy",
       -- "norg",
       -- "zig",

@@ -34,12 +34,12 @@ vim.cmd([[autocmd FileType norg set tw=99 colorcolumn=100]])
 -- stop auto commenting on new line
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = "*.wgsl",
-  callback = function()
-    vim.bo.filetype = "wgsl_bevy"
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+--   pattern = "*.wgsl",
+--   callback = function()
+--     vim.bo.filetype = "wgsl_bevy"
+--   end,
+-- })
 
 -- gdscript indentation
 vim.api.nvim_create_autocmd("FileType", {
