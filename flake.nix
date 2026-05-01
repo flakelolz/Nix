@@ -47,6 +47,6 @@
         ];
       };
 
-      templates = import ./dev;
+      templates = import ./templates;
     };
 }

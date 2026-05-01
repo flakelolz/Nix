@@ -4,7 +4,6 @@
     inputs.zen-browser.homeModules.default
     modules/programs/cli/bat
     modules/programs/cli/btop
-    modules/programs/cli/direnv
     modules/programs/cli/git
     modules/programs/cli/starship
     modules/programs/cli/tmux
@@ -27,6 +26,8 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    VISUAL = "nvim";
+    SUDO_EDITOR = "nvim";
   };
 
   home.packages = with pkgs; [

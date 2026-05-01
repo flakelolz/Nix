@@ -10,7 +10,7 @@
 -- Disable lsp semantic tokens for highlighting
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
-    local blacklist = { "rust-analyzer", "marksman", "vtsls", "lua_ls", "clangd" }
+    local blacklist = { "marksman", "vtsls", "lua_ls", "clangd" }
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     if client then
       for _, name in ipairs(blacklist) do
