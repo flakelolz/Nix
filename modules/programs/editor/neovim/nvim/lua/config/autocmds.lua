@@ -56,6 +56,9 @@ vim.api.nvim_create_autocmd("FileType", {
 -- C/C++ indentation
 vim.cmd([[autocmd FileType c,cpp set shiftwidth=4]])
 
+-- wgsl indentation
+vim.cmd([[autocmd FileType wgsl set shiftwidth=4]])
+
 -- ZMK keymap
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
   pattern = { "*.keymap" },

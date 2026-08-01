@@ -1,4 +1,4 @@
-{ pkgs, config, lib, inputs, ... }:
+{ pkgs, config, ... }:
 let
   homeDir = config.home.homeDirectory;
   symlink = config.lib.file.mkOutOfStoreSymlink;

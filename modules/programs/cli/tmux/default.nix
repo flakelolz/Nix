@@ -17,20 +17,18 @@ in
     clock24 = true;
     keyMode = "vi";
     terminal = "tmux-256color";
-    # terminal = "screen-256color";
     historyLimit = 100000;
     plugins = with pkgs.tmuxPlugins; [
       dreamsofcode-io-catppuccin-tmux
-      # catppuccin
       sensible
       vim-tmux-navigator
       {
         plugin = resurrect;
-        # extraConfig = ''
-        #   set -g @resurrect-strategy-vim 'session'
-        #   set -g @resurrect-strategy-nvim 'session'
-        #   set -g @resurrect-capture-pane-contents 'on'
-        # '';
+        extraConfig = ''
+      #   set -g @resurrect-strategy-vim 'session'
+      #   set -g @resurrect-strategy-nvim 'session'
+          set -g @resurrect-capture-pane-contents 'on'
+        '';
         /*
           + ''
             # Taken from https://github.com/hmajid2301/dotfiles/blob/main/modules/home/cli/multiplexers/tmux/default.nix#L109

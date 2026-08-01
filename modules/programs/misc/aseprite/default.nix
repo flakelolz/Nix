@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = [
-    (pkgs.aseprite.overrideAttrs (_: { }))
+    pkgs.aseprite
   ];
 }

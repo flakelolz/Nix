@@ -12,6 +12,8 @@
     modules/programs/editor/neovim
     modules/programs/shell/bash
     modules/programs/shell/fish
+    modules/programs/misc/aseprite
+    modules/programs/misc/ldtk
     modules/programs/terminal/kitty
   ];
 
@@ -22,6 +24,7 @@
 
   home.sessionVariables = {
     SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
+    XDG_DATA_DIRS = "/home/flakelolz/.nix-profile/share:/nix/var/nix/profiles/default/share:/usr/local/share:/usr/share";
   };
 
   home.sessionVariables = {

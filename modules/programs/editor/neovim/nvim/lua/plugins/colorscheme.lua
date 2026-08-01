@@ -23,10 +23,10 @@ return {
           local O = require("catppuccin").options
           return {
             -- ["@variable.member"] = { fg = C.lavender }, -- For fields.
-            ["@module"] = { fg = C.lavender, style = O.styles.miscs or { "italic" } }, -- For identifiers referring to modules and namespaces.
-            ["@function.macro"] = { fg = C.teal, style = O.styles.miscs or { "italic" } },
+            ["@module"] = { fg = C.lavender }, -- For identifiers referring to modules and namespaces.
+            ["@function.macro"] = { fg = C.teal },
             ["@string.special.url"] = { fg = C.rosewater, style = { "italic", "underline" } }, -- urls, links and emails
-            ["@type.builtin"] = { fg = C.yellow, style = O.styles.properties or { "italic" } }, -- For builtin types.
+            ["@type.builtin"] = { fg = C.yellow }, -- For builtin types.
             ["@property"] = { fg = C.lavender, style = O.styles.properties or {} }, -- Same as TSField.
             ["@constructor"] = { fg = C.sapphire }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
             ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator
@@ -43,12 +43,11 @@ return {
             ["@tag"] = { fg = C.mauve }, -- Tags like html tag names.
             ["@tag.attribute"] = { fg = C.teal, style = O.styles.miscs or { "italic" } }, -- Tags like html tag names.
             ["@tag.delimiter"] = { fg = C.sky }, -- Tag delimiter like < > /
-            ["@property.css"] = { fg = C.lavender },
-            ["@property.id.css"] = { fg = C.blue },
-            ["@type.tag.css"] = { fg = C.mauve },
-            ["@string.plain.css"] = { fg = C.peach },
+            ["@boolean"] = { fg = C.red }, -- true or false
+            -- Lua
             ["@constructor.lua"] = { fg = C.flamingo }, -- For constructor calls and definitions: = { } in Lua.
             ["@namespace.builtin.lua"] = { fg = C.red },
+
             -- Rust
             ["@lsp.type.enumMember"] = { fg = C.peach },
             ["@lsp.type.enumMember.rust"] = { fg = C.peach },
@@ -58,10 +57,19 @@ return {
             ["@lsp.typemod.function.defaultLibrary.rust"] = { fg = C.blue },
             ["@lsp.typemod.enumMember.library"] = { fg = C.peach },
             ["@lsp.typemod.enumMember.library.rust"] = { fg = C.peach },
-
             -- Optional: keep consistency if other modifiers appear later
             ["@lsp.typemod.enumMember"] = { fg = C.peach },
             ["@lsp.typemod.enumMember.rust"] = { fg = C.peach },
+            -- Disable semantic tokes and let Treesitter handle this
+            ["@lsp.type.property.rust"] = {},
+            ["@lsp.typemod.property.rust"] = {},
+            ["@lsp.typemod.property.library.rust"] = {},
+
+            -- CSS
+            ["@property.css"] = { fg = C.lavender },
+            ["@property.id.css"] = { fg = C.blue },
+            ["@type.tag.css"] = { fg = C.mauve },
+            ["@string.plain.css"] = { fg = C.peach },
             -- typescript
             ["@property.typescript"] = { fg = C.lavender, style = O.styles.properties or {} },
             ["@constructor.typescript"] = { fg = C.lavender },
